@@ -19,47 +19,48 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[50],
-      body: Column( crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-
-            SizedBox(height: 64.0),
-
-            Padding( 
-             padding: EdgeInsets.symmetric(horizontal: 80.0),
-             child:RaisedButton(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          SizedBox(height: 64.0),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 80.0),
+            child: RaisedButton(
               child: Text('Registration Page'),
               onPressed: () =>
                   Modular.navigator.pushNamed('/Registration1Page'),
-            ),),
-            SizedBox(height: 32.0),
-            Observer(
-              builder: (_) {
-                return Padding( 
-             padding: EdgeInsets.symmetric(horizontal: 20.0),
-             child:Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+            ),
+          ),
+          SizedBox(height: 32.0),
+          Observer(
+            builder: (_) {
+              return Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Nome: ${registrationController.nome}'),
+                    Text('Nome: ${registrationController.client.nome}'),
                     SizedBox(height: 16.0),
-                    Text('CPF: ${registrationController.cpf}'),
+                    Text('CPF: ${registrationController.client.cpf}'),
                     SizedBox(height: 16.0),
-                    Text('Telefone: ${registrationController.telefone}'),
+                    Text('Telefone: ${registrationController.client.telefone}'),
                     SizedBox(height: 16.0),
-                    Text('E-mail: ${registrationController.email}'),
+                    Text('E-mail: ${registrationController.client.email}'),
                     SizedBox(height: 16.0),
                     Text(
-                        'Data de Nascimento: ${registrationController.dataNascimento}'),
+                        'Data de Nascimento: ${registrationController.client.dataNascimento}'),
                     SizedBox(height: 16.0),
-                    Text('Nome da Mãe: ${registrationController.nomeMae}'),
+                    Text(
+                        'Nome da Mãe: ${registrationController.client.nomeMae}'),
                     SizedBox(height: 16.0),
                   ],
-                ),);
-              },
-            ),
-          ],
-        ),
-      
+                ),
+              );
+            },
+          ),
+        ],
+      ),
     );
   }
 }

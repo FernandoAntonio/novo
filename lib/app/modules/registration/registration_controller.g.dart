@@ -19,94 +19,18 @@ final $RegistrationController = BindInject(
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$RegistrationController on _RegistrationControllerBase, Store {
-  final _$nomeAtom = Atom(name: '_RegistrationControllerBase.nome');
+  final _$clientAtom = Atom(name: '_RegistrationControllerBase.client');
 
   @override
-  String get nome {
-    _$nomeAtom.reportRead();
-    return super.nome;
+  Client get client {
+    _$clientAtom.reportRead();
+    return super.client;
   }
 
   @override
-  set nome(String value) {
-    _$nomeAtom.reportWrite(value, super.nome, () {
-      super.nome = value;
-    });
-  }
-
-  final _$cpfAtom = Atom(name: '_RegistrationControllerBase.cpf');
-
-  @override
-  String get cpf {
-    _$cpfAtom.reportRead();
-    return super.cpf;
-  }
-
-  @override
-  set cpf(String value) {
-    _$cpfAtom.reportWrite(value, super.cpf, () {
-      super.cpf = value;
-    });
-  }
-
-  final _$telefoneAtom = Atom(name: '_RegistrationControllerBase.telefone');
-
-  @override
-  String get telefone {
-    _$telefoneAtom.reportRead();
-    return super.telefone;
-  }
-
-  @override
-  set telefone(String value) {
-    _$telefoneAtom.reportWrite(value, super.telefone, () {
-      super.telefone = value;
-    });
-  }
-
-  final _$emailAtom = Atom(name: '_RegistrationControllerBase.email');
-
-  @override
-  String get email {
-    _$emailAtom.reportRead();
-    return super.email;
-  }
-
-  @override
-  set email(String value) {
-    _$emailAtom.reportWrite(value, super.email, () {
-      super.email = value;
-    });
-  }
-
-  final _$dataNascimentoAtom =
-      Atom(name: '_RegistrationControllerBase.dataNascimento');
-
-  @override
-  String get dataNascimento {
-    _$dataNascimentoAtom.reportRead();
-    return super.dataNascimento;
-  }
-
-  @override
-  set dataNascimento(String value) {
-    _$dataNascimentoAtom.reportWrite(value, super.dataNascimento, () {
-      super.dataNascimento = value;
-    });
-  }
-
-  final _$nomeMaeAtom = Atom(name: '_RegistrationControllerBase.nomeMae');
-
-  @override
-  String get nomeMae {
-    _$nomeMaeAtom.reportRead();
-    return super.nomeMae;
-  }
-
-  @override
-  set nomeMae(String value) {
-    _$nomeMaeAtom.reportWrite(value, super.nomeMae, () {
-      super.nomeMae = value;
+  set client(Client value) {
+    _$clientAtom.reportWrite(value, super.client, () {
+      super.client = value;
     });
   }
 
@@ -182,12 +106,7 @@ mixin _$RegistrationController on _RegistrationControllerBase, Store {
   @override
   String toString() {
     return '''
-nome: ${nome},
-cpf: ${cpf},
-telefone: ${telefone},
-email: ${email},
-dataNascimento: ${dataNascimento},
-nomeMae: ${nomeMae}
+client: ${client}
     ''';
   }
 }
