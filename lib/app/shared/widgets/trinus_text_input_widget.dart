@@ -18,7 +18,7 @@ class TrinusTextInput extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 32.0),
       child: FormBuilderTextField(
         attribute: 'attribute',
-        onChanged: onChanged,
+        onChanged: (value) => onChanged(value),
         decoration: InputDecoration(hintText: hintText),
         controller: controller,
       ),

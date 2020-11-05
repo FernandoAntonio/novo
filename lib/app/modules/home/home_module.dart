@@ -1,12 +1,10 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:novo/app/app_controller.dart';
-
-import 'package:novo/app/modules/registration/views/registration_1_page.dart';
+import 'package:novo/app/modules/registration/views/registration_1/registration_1_page.dart';
 import 'package:novo/app/repositories/main_repository.dart';
 
 import 'home_controller.dart';
-import 'package:flutter_modular/flutter_modular.dart';
-
 import 'home_page.dart';
 
 class HomeModule extends ChildModule {
@@ -21,8 +19,7 @@ class HomeModule extends ChildModule {
   @override
   List<ModularRouter> get routers => [
         ModularRouter(Modular.initialRoute, child: (_, args) => HomePage()),
-        ModularRouter('/RegistrationPage',
-            child: (_, args) => Registration1Page()),
+        ModularRouter('/RegistrationPage', child: (_, args) => Registration1Page()),
       ];
 
   static Inject get to => Inject<HomeModule>.of();
