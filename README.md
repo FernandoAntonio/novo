@@ -1,4 +1,4 @@
-# novo
+# Cadastro simples usando Modular + Mobx
 
 A new Flutter project.
 
